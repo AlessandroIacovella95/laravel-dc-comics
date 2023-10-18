@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('main-content')
-<div class="container mt-5">
-    <h1>{{ $comic->title }}</h1>
+<div class="container my-5">
+    <a href="{{route('comics.index')}}" class="btn btn-success">
+        Torna alla lista
+    </a>
+    <h1 class="mt-5">{{ $comic->title }}</h1>
     <div class="row g-4">
         
         <div class="col-3">

@@ -10,7 +10,7 @@
         <a href="{{route('comics.create')}}" class="btn btn-success">
             Crea nuovo fumetto
         </a>
-        <h1 class="mb-3">Comics</h1>
+        <h1 class="my-3">Comics</h1>
         <div class="row">
           @foreach ($comics as $comic)
             <div class="col-lg-4 col-md-6 mb-4">
