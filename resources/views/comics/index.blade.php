@@ -31,6 +31,13 @@
                       <a href="{{ route('comics.edit', $comic)}}">
                         <i class="fa-solid fa-pencil"></i>              
                       </a>
+                      <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button>
+                          <i class="fa-solid fa-trash text-danger"></i>
+                        </button>
+                      </form>
                     </div>
                   </p>
                 </div>

@@ -85,10 +85,11 @@ class ComicController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * *@return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+       $comic->delete();
+       return redirect()->route('comics.index');
     }
 }

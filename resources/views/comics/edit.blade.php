@@ -15,7 +15,7 @@
         @method('PUT')
 
         <div class="col-4">
-            <img class="img-fluid" src="" alt="" id="preview-image">
+            <img class="img-fluid" src="{{ $comic->thumb}}" alt="" id="preview-image">
         </div>
 
         <div class="col-8">
