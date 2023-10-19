@@ -20,6 +20,8 @@
     @yield('main-content')
   </main>
 
+  @yield('scripts')
+
 </body>
 
 </html>
