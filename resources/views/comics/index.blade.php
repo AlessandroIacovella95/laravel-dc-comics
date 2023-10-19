@@ -31,13 +31,32 @@
                       <a href="{{ route('comics.edit', $comic)}}">
                         <i class="fa-solid fa-pencil"></i>              
                       </a>
-                      <form action="{{route('comics.destroy', $comic)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button>
-                          <i class="fa-solid fa-trash text-danger"></i>
-                        </button>
-                      </form>
+
+                      <a href="#" type="button" class="" data-bs-toggle="modal" data-bs-target="#delete-modal-{{$comic->id}}">
+                        <i class="fa-solid fa-trash text-danger"></i>
+                      </a>
+
+                      <div class="modal fade" id="delete-modal-{{$comic->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Elimina elemento</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Vuoi davvero eliminare il fumetto {{$comic->title}}?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annulla</button>
+                              <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                  <button class="btn btn-danger">Elimina</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </p>
                 </div>
