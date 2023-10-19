@@ -17,16 +17,21 @@
               <div class="card h-100">
                 <div class="card-body">
                   <p class="card-text">
+                    <img src="{{ $comic->thumb }}" alt=""><br>
                     <strong>Titolo:</strong> {{ $comic->title }}<br>
                     <strong>Descrizione:</strong> {{ $comic->description }}<br>
-                    <img src="{{ $comic->thumb }}" alt=""><br>
                     <strong>Prezzo:</strong> {{ $comic->price }} <br>
                     <strong>Serie:</strong> {{ $comic->series }} <br>
                     <strong>Data di uscita:</strong> {{ $comic->sale_date }} <br>
                     <strong>Genere:</strong> {{ $comic->type }} <br>
-                    <a href="{{ route('comics.show', $comic)}}">
-                        <i class="custom fa-solid fa-eye"></i>
-                    </a>
+                    <div class="d-flex justify-content-center mt-5">
+                      <a href="{{ route('comics.show', $comic)}}">
+                          <i class="fa-solid fa-eye"></i>
+                      </a>
+                      <a href="{{ route('comics.edit', $comic)}}">
+                        <i class="fa-solid fa-pencil"></i>              
+                      </a>
+                    </div>
                   </p>
                 </div>
               </div>

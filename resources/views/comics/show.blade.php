@@ -5,6 +5,9 @@
     <a href="{{route('comics.index')}}" class="btn btn-success">
         Torna alla lista
     </a>
+    <a href="{{route('comics.edit', $comic)}}" class="btn btn-warning ms-2">
+        Modifica
+    </a>
     <h1 class="mt-5">{{ $comic->title }}</h1>
     <div class="row g-4">
         
