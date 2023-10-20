@@ -28,25 +28,96 @@
             <div class="row">
                 <div class="col-3">
                     <label for="title">Titolo:</label>
-                    <input type="text" id="title" name="title" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('title') is-invalid @enderror"
+                    id="title"
+                    name="title"
+                    value="{{ old('title') }}"
+                    />
+                    @error('title')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror   
+                </div>             
                 <div class="col-3">
                     <label for="price">Prezzo:</label>
-                    <input type="text" id="price" name="price" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('price') is-invalid @enderror"
+                    id="price"
+                    name="price"
+                    value="{{ old('price') }}"
+                    />
+                    @error('price')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col-3">
                     <label for="series">Serie:</label>
-                    <input type="text" id="series" name="series" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('series') is-invalid @enderror"
+                    id="series"
+                    name="series"
+                    value="{{ old('series') }}"
+                    />
+                    @error('series')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div> 
+
                 <div class="col-3">
                     <label for="sale_date">Data di uscita:</label>
-                    <input type="text" id="sale_date" name="sale_date" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('sale_date') is-invalid @enderror"
+                    id="sale_date"
+                    name="sale_date"
+                    value="{{ old('sale_date') }}"
+                    />
+                    @error('sale_date')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col-3">
                     <label for="type">Genere:</label>
-                    <input type="text" name="type" id="type" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('type') is-invalid @enderror"
+                    id="type"
+                    name="type"
+                    value="{{ old('type') }}"
+                    />
+                    @error('type')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col-12">
                     <label for="thumb">Immagine:</label>
-                    <input type="url" id="thumb" name="thumb" class="form-control"></div>
+                    <input
+                    type="text"
+                    class="form-control @error('thumb') is-invalid @enderror"
+                    id="thumb"
+                    name="thumb"
+                    value="{{ old('thumb') }}"
+                    />
+                    @error('thumb')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col-12">
                     <label for="description">Descrizione:</label>
-                    <input type="textarea" id="description" name="description" class="form-control"></div>
+                    <input
+                    type="textarea"
+                    class="form-control @error('description') is-invalid @enderror"
+                    id="description"
+                    name="description"
+                    value="{{ old('description') }}"
+                    />
+                    @error('description')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
                 <div class="col-3">
                     <button class="btn btn-primary mt-3">Salva</button>
                 </div>    
